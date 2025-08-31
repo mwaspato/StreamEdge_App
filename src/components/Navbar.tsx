@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import Logo from '../img/NavLogo.png'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,10 +25,11 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-cyan-400 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">SE</span>
-            </div>
-            <span className="text-slate-100 font-bold text-xl">Stream Edge</span>
+            <img
+              src={Logo}
+              alt="Stream Edge Logo"
+              className="w-[200px] h-[80px] object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}
